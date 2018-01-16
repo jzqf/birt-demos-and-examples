@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         id="com.innoventsolutions.birt.aggregation"
+         name="TotalPlus"
+         point="org.eclipse.birt.data.aggregation">
+      <Aggregations>
+         <Aggregation
+               aggregationClass="com.innoventsolutions.birt.aggregate.OptimisticSum"
+               name="OptimisticSum">
+            <UIInfo
+                  parameterMetaInfo="String a, String b, String c"
+                  textData="Total.OptimisticSum()"
+                  tip="New Optimistic Sum tip~"/>
+         </Aggregation>
+      </Aggregations>
+   </extension>
+</plugin>

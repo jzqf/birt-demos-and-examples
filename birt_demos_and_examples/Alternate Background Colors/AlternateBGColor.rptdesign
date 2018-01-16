@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="comments">Copyright (c) 2007 &lt;&lt;Your Company Name here>></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <html-property name="description">Creates a blank report with no predefined content.</html-property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">HOME</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">URI</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">DELIMTYPE</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">CHARSET</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">INCLCOLUMNNAME</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">INCLTYPELINE</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">TRAILNULLCOLS</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">OdaConnProfileName</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">OdaConnProfileStorePath</property>
+            <property name="id">6</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <method name="initialize"><![CDATA[i = 0;]]></method>
+    <text-property name="displayName">Blank Report</text-property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="Data Source" id="6">
+            <property name="HOME">Alternate Background Colors/</property>
+            <property name="DELIMTYPE">COMMA</property>
+            <property name="CHARSET">UTF-8</property>
+            <property name="INCLCOLUMNNAME">YES</property>
+            <property name="INCLTYPELINE">NO</property>
+            <property name="TRAILNULLCOLS">NO</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Data Set" id="7">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Depth</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Depth</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Level1</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Level1</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Level2</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Level2</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Level3</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Level3</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Level4</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Level4</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Level5</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Level5</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AccountID</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">AccountID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AccountName</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">AccountName</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AsofDate</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">AsofDate</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">InceptionDt</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">InceptionDt</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CurrencyCode</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">CurrencyCode</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Depth</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Level1</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Level2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Level3</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Level4</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Level5</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">AccountID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">AccountName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">AsofDate</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">InceptionDt</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">CurrencyCode</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Depth</property>
+                    <property name="nativeName">Depth</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Level1</property>
+                    <property name="nativeName">Level1</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Level2</property>
+                    <property name="nativeName">Level2</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Level3</property>
+                    <property name="nativeName">Level3</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Level4</property>
+                    <property name="nativeName">Level4</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Level5</property>
+                    <property name="nativeName">Level5</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">AccountID</property>
+                    <property name="nativeName">AccountID</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">AccountName</property>
+                    <property name="nativeName">AccountName</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">AsofDate</property>
+                    <property name="nativeName">AsofDate</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">InceptionDt</property>
+                    <property name="nativeName">InceptionDt</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">CurrencyCode</property>
+                    <property name="nativeName">CurrencyCode</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Depth", "Level1", "Level2", "Level3", "Level4", "Level5", "AccountID", "AccountName", "AsofDate", "InceptionDt", "CurrencyCode" from "Alternates Data.csv" : {"Depth","Depth",STRING;"Level1","Level1",STRING;"Level2","Level2",STRING;"Level3","Level3",STRING;"Level4","Level4",STRING;"Level5","Level5",STRING;"AccountID","AccountID",STRING;"AccountName","AccountName",STRING;"AsofDate","AsofDate",STRING;"InceptionDt","InceptionDt",STRING;"CurrencyCode","CurrencyCode",STRING}]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="crosstab" id="4">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="topMargin">1in</property>
+            <property name="leftMargin">0in</property>
+            <property name="bottomMargin">1in</property>
+            <property name="rightMargin">0in</property>
+            <property name="height">200in</property>
+            <property name="width">30in</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="855">
+            <property name="fontFamily">"Arial"</property>
+            <property name="fontSize">8pt</property>
+            <property name="width">100%</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Level1</property>
+                    <expression name="expression">dataSetRow["Level1"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Level2</property>
+                    <expression name="expression">dataSetRow["Level2"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Level3</property>
+                    <expression name="expression">dataSetRow["Level3"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Level4</property>
+                    <expression name="expression">dataSetRow["Level4"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Level5</property>
+                    <expression name="expression">dataSetRow["Level5"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">AccountID</property>
+                    <expression name="expression">dataSetRow["AccountID"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">AccountName</property>
+                    <expression name="expression">dataSetRow["AccountName"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">AsofDate</property>
+                    <expression name="expression">dataSetRow["AsofDate"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">InceptionDt</property>
+                    <expression name="expression">dataSetRow["InceptionDt"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CurrencyCode</property>
+                    <expression name="expression">dataSetRow["CurrencyCode"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="pageBreakInterval">50</property>
+            <column id="1000">
+                <property name="textAlign">left</property>
+                <property name="width">0.8in</property>
+            </column>
+            <column id="1001">
+                <property name="textAlign">left</property>
+                <property name="width">0.8in</property>
+            </column>
+            <column id="1002">
+                <property name="textAlign">left</property>
+                <property name="width">0.8in</property>
+            </column>
+            <column id="1003">
+                <property name="textAlign">left</property>
+                <property name="width">0.8in</property>
+            </column>
+            <column id="1004">
+                <property name="textAlign">left</property>
+                <property name="width">0.8in</property>
+            </column>
+            <column id="1007">
+                <property name="textAlign">left</property>
+                <property name="width">1in</property>
+            </column>
+            <column id="1009">
+                <property name="textAlign">left</property>
+                <property name="width">1.2in</property>
+            </column>
+            <column id="1013">
+                <property name="textAlign">right</property>
+                <property name="width">0.7in</property>
+            </column>
+            <column id="1026">
+                <property name="textAlign">left</property>
+                <property name="width">1in</property>
+            </column>
+            <header>
+                <row id="1028">
+                    <property name="fontWeight">bold</property>
+                    <property name="height">0.67in</property>
+                    <cell id="1029">
+                        <property name="colSpan">9</property>
+                        <property name="rowSpan">1</property>
+                        <label id="685">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">14pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Alternate Row Background Color</text-property>
+                        </label>
+                    </cell>
+                </row>
+                <row id="856">
+                    <property name="backgroundColor">#CEFBFF</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="height">0.4in</property>
+                    <cell id="859">
+                        <label id="860">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Level1</text-property>
+                        </label>
+                    </cell>
+                    <cell id="861">
+                        <label id="862">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Level2</text-property>
+                        </label>
+                    </cell>
+                    <cell id="863">
+                        <label id="864">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Level3</text-property>
+                        </label>
+                    </cell>
+                    <cell id="865">
+                        <label id="866">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Level4</text-property>
+                        </label>
+                    </cell>
+                    <cell id="867">
+                        <label id="868">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Level5</text-property>
+                        </label>
+                    </cell>
+                    <cell id="873">
+                        <label id="874">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">AccountID</text-property>
+                        </label>
+                    </cell>
+                    <cell id="877">
+                        <label id="878">
+                            <text-property name="text">Account Name</text-property>
+                        </label>
+                    </cell>
+                    <cell id="885">
+                        <label id="886">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">AsofDate</text-property>
+                        </label>
+                    </cell>
+                    <cell id="911">
+                        <label id="912">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Currency Code</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="913">
+                    <method name="onRender"><![CDATA[if (i==0) {
+    	this.getStyle().backgroundColor = "silver";
+	    i = 1;
+    } 
+    else
+    {
+        this.getStyle().backgroundColor = "lightgray";
+	    i = 0;
+    }]]></method>
+                    <cell id="916">
+                        <data id="917">
+                            <property name="resultSetColumn">Level1</property>
+                        </data>
+                    </cell>
+                    <cell id="918">
+                        <data id="919">
+                            <property name="resultSetColumn">Level2</property>
+                        </data>
+                    </cell>
+                    <cell id="920">
+                        <data id="921">
+                            <property name="resultSetColumn">Level3</property>
+                        </data>
+                    </cell>
+                    <cell id="922">
+                        <data id="923">
+                            <property name="resultSetColumn">Level4</property>
+                        </data>
+                    </cell>
+                    <cell id="924">
+                        <data id="925">
+                            <property name="resultSetColumn">Level5</property>
+                        </data>
+                    </cell>
+                    <cell id="930">
+                        <data id="931">
+                            <property name="resultSetColumn">AccountID</property>
+                        </data>
+                    </cell>
+                    <cell id="934">
+                        <data id="935">
+                            <property name="resultSetColumn">AccountName</property>
+                        </data>
+                    </cell>
+                    <cell id="942">
+                        <data id="943">
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">AsofDate</property>
+                        </data>
+                    </cell>
+                    <cell id="968">
+                        <data id="969">
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">CurrencyCode</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="970">
+                    <cell id="972"/>
+                    <cell id="973"/>
+                    <cell id="974"/>
+                    <cell id="975"/>
+                    <cell id="976"/>
+                    <cell id="979"/>
+                    <cell id="981"/>
+                    <cell id="985"/>
+                    <cell id="998"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

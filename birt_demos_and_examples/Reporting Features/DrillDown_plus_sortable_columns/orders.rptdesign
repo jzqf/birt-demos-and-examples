@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.17" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 2.3.2.r232_v20090521 Build &lt;2.3.2.v20090601-0700></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <parameters>
+        <scalar-parameter name="order_param" id="9">
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="isRequired">false</property>
+            <property name="controlType">text-box</property>
+            <property name="defaultValue">119</property>
+            <property name="distinct">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ReportFile" id="62">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <property name="defaultValue">C:\Users\Andrew\workspace\Reports\DrillDown\orders.rptdesign</property>
+            <property name="distinct">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="SortedBy" id="63">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <property name="defaultValue">ORDERDATE</property>
+            <property name="distinct">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="SortAscending" id="64">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">check-box</property>
+            <property name="defaultValue">true</property>
+            <property name="distinct">true</property>
+            <structure name="format"/>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="7">
+            <property name="odaDriverClass">org.eclipse.birt.report.data.oda.sampledb.Driver</property>
+            <property name="odaURL">jdbc:classicmodels:sampledb</property>
+            <property name="odaUser">ClassicModels</property>
+            <property name="OdaConnProfileName"></property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Orders" id="8">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ORDERNUMBER</property>
+                    <property name="displayName">ORDERNUMBER</property>
+                </structure>
+                <structure>
+                    <property name="columnName">ORDERDATE</property>
+                    <property name="displayName">ORDERDATE</property>
+                </structure>
+                <structure>
+                    <property name="columnName">STATUS</property>
+                    <property name="displayName">STATUS</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ORDERNUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">ORDERDATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">STATUS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">order_param</property>
+                    <property name="paramName">order_param</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">1</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ORDERNUMBER</property>
+                    <property name="nativeName">ORDERNUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">ORDERDATE</property>
+                    <property name="nativeName">ORDERDATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">STATUS</property>
+                    <property name="nativeName">STATUS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <property name="queryText">select CLASSICMODELS.ORDERS.ORDERNUMBER,CLASSICMODELS.ORDERS.ORDERDATE,CLASSICMODELS.ORDERS.STATUS
+from CLASSICMODELS.ORDERS
+where CLASSICMODELS.ORDERS.CUSTOMERNUMBER = ?</property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>1.0</Version>
+  <design:DataSetParameters>
+    <design:parameterDefinitions>
+      <design:inOutMode>In</design:inOutMode>
+      <design:attributes>
+        <design:name></design:name>
+        <design:position>1</design:position>
+        <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+        <design:precision>10</design:precision>
+        <design:scale>0</design:scale>
+        <design:nullability>Nullable</design:nullability>
+      </design:attributes>
+      <design:inputAttributes>
+        <design:elementAttributes>
+          <design:optional>true</design:optional>
+        </design:elementAttributes>
+      </design:inputAttributes>
+    </design:parameterDefinitions>
+  </design:DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>ORDERNUMBER</design:name>
+            <design:position>1</design:position>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ORDERNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ORDERNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>ORDERDATE</design:name>
+            <design:position>2</design:position>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ORDERDATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ORDERDATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>STATUS</design:name>
+            <design:position>3</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>STATUS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>STATUS</design:label>
+            <design:formattingHints>
+              <design:displaySize>15</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">"Verdana"</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="topMargin">0.25in</property>
+            <property name="leftMargin">0.25in</property>
+            <property name="bottomMargin">0.25in</property>
+            <property name="rightMargin">0.25in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="10">
+            <property name="marginTop">0pt</property>
+            <property name="height">1.3645833333333333in</property>
+            <property name="width">6.354166666666667in</property>
+            <property name="dataSet">Orders</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">ORDERNUMBER</property>
+                    <property name="displayName">ORDERNUMBER</property>
+                    <expression name="expression">dataSetRow["ORDERNUMBER"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">ORDERDATE</property>
+                    <property name="displayName">ORDERDATE</property>
+                    <expression name="expression">dataSetRow["ORDERDATE"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">STATUS</property>
+                    <property name="displayName">STATUS</property>
+                    <expression name="expression">dataSetRow["STATUS"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="sort">
+                <structure>
+                    <expression name="key">if (params["SortAscending"].value) {
+  row[params["SortedBy"].value];
+  }</expression>
+                    <property name="direction">asc</property>
+                </structure>
+                <structure>
+                    <expression name="key">if (!params["SortAscending"].value) {
+  row[params["SortedBy"].value];
+  }</expression>
+                    <property name="direction">desc</property>
+                </structure>
+            </list-property>
+            <column id="29">
+                <property name="width">2.3333333333333335in</property>
+            </column>
+            <column id="30">
+                <property name="width">2.1354166666666665in</property>
+            </column>
+            <column id="31">
+                <property name="width">1.8854166666666667in</property>
+            </column>
+            <header>
+                <row id="11">
+                    <property name="height">9pt</property>
+                    <property name="backgroundImage">C:\Users\Andrew\workspace\Reports\DrillDown\hdrbkgrnd.gif</property>
+                    <property name="borderLeftColor">#000000</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#000000</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="textAlign">left</property>
+                    <property name="canShrink">false</property>
+                    <cell id="12">
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">1px</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">1px</property>
+                        <grid id="32">
+                            <property name="width">100%</property>
+                            <column id="33">
+                                <property name="width">1.0729166666666667in</property>
+                            </column>
+                            <column id="34">
+                                <property name="width">10px</property>
+                            </column>
+                            <column id="35">
+                                <property name="width">10px</property>
+                            </column>
+                            <row id="36">
+                                <cell id="37">
+                                    <label id="13">
+                                        <text-property name="text">ORDERNUMBER</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="38">
+                                    <text id="56">
+                                        <property name="contentType">html</property>
+                                        <text-property name="content"><![CDATA[<a href="/../viewer/frameset?__report=<VALUE-OF>params["ReportFile"].value</VALUE-OF>&amp;SortedBy=ORDERNUMBER&amp;SortAscending=true&amp;order_param=<VALUE-OF>params["order_param"].value</VALUE-OF>" style="text-decoration:none"><img src="down_arrow.png" border=0></a>]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="39">
+                                    <text id="57">
+                                        <property name="contentType">html</property>
+                                        <text-property name="content"><![CDATA[<a href="/../viewer/frameset?__report=<VALUE-OF>params["ReportFile"].value</VALUE-OF>&amp;SortedBy=ORDERNUMBER&amp;SortAscending=false&amp;order_param=<VALUE-OF>params["order_param"].value</VALUE-OF>" style="text-decoration:none"><img src="up_arrow.png" border=0></a>]]></text-property>
+                                    </text>
+                                </cell>
+                            </row>
+                        </grid>
+                    </cell>
+                    <cell id="14">
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">1px</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">1px</property>
+                        <grid id="40">
+                            <property name="width">100%</property>
+                            <column id="41"/>
+                            <column id="42">
+                                <property name="width">10px</property>
+                            </column>
+                            <column id="43">
+                                <property name="width">10px</property>
+                            </column>
+                            <row id="44">
+                                <cell id="45">
+                                    <label id="15">
+                                        <text-property name="text">ORDERDATE</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="46">
+                                    <text id="58">
+                                        <property name="contentType">html</property>
+                                        <text-property name="content"><![CDATA[<a href="/../viewer/frameset?__report=<VALUE-OF>params["ReportFile"].value</VALUE-OF>&amp;SortedBy=ORDERDATE&amp;SortAscending=true&amp;order_param=<VALUE-OF>params["order_param"].value</VALUE-OF>" style="text-decoration:none"><img src="down_arrow.png" border=0></a>]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="47">
+                                    <text id="59">
+                                        <property name="contentType">html</property>
+                                        <text-property name="content"><![CDATA[<a href="/../viewer/frameset?__report=<VALUE-OF>params["ReportFile"].value</VALUE-OF>&amp;SortedBy=ORDERDATE&amp;SortAscending=false&amp;order_param=<VALUE-OF>params["order_param"].value</VALUE-OF>" style="text-decoration:none"><img src="up_arrow.png" border=0></a>]]></text-property>
+                                    </text>
+                                </cell>
+                            </row>
+                        </grid>
+                    </cell>
+                    <cell id="16">
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">1px</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">1px</property>
+                        <grid id="48">
+                            <property name="width">100%</property>
+                            <column id="49"/>
+                            <column id="50">
+                                <property name="width">10px</property>
+                            </column>
+                            <column id="51">
+                                <property name="width">10px</property>
+                            </column>
+                            <row id="52">
+                                <cell id="53">
+                                    <label id="17">
+                                        <text-property name="text">STATUS</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="54">
+                                    <text id="60">
+                                        <property name="contentType">html</property>
+                                        <text-property name="content"><![CDATA[<a href="/../viewer/frameset?__report=<VALUE-OF>params["ReportFile"].value</VALUE-OF>&amp;SortedBy=STATUS&amp;SortAscending=true&amp;order_param=<VALUE-OF>params["order_param"].value</VALUE-OF>" style="text-decoration:none"><img src="down_arrow.png" border=0></a>]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="55">
+                                    <text id="61">
+                                        <property name="contentType">html</property>
+                                        <text-property name="content"><![CDATA[<a href="/../viewer/frameset?__report=<VALUE-OF>params["ReportFile"].value</VALUE-OF>&amp;SortedBy=STATUS&amp;SortAscending=false&amp;order_param=<VALUE-OF>params["order_param"].value</VALUE-OF>" style="text-decoration:none"><img src="up_arrow.png" border=0></a>]]></text-property>
+                                    </text>
+                                </cell>
+                            </row>
+                        </grid>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="18">
+                    <cell id="19">
+                        <data id="20">
+                            <property name="resultSetColumn">ORDERNUMBER</property>
+                            <structure name="action">
+                                <property name="linkType">drill-through</property>
+                                <property name="reportName">order_details.rptdesign</property>
+                                <property name="targetWindow">_self</property>
+                                <property name="targetFileType">report-design</property>
+                                <list-property name="paramBindings">
+                                    <structure>
+                                        <property name="paramName">order_details_param</property>
+                                        <expression name="expression">row["ORDERNUMBER"]</expression>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                        </data>
+                    </cell>
+                    <cell id="21">
+                        <data id="22">
+                            <property name="resultSetColumn">ORDERDATE</property>
+                        </data>
+                    </cell>
+                    <cell id="23">
+                        <data id="24">
+                            <property name="resultSetColumn">STATUS</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="25">
+                    <cell id="26"/>
+                    <cell id="27"/>
+                    <cell id="28"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

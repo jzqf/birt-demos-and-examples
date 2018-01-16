@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Aggregate Plug-in
+Bundle-SymbolicName: com.innoventsolutions.birt.aggregate;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: INNOVENTSOLUTIONS
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.birt.data
+Eclipse-LazyStart: true
